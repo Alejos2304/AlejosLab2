@@ -180,6 +180,153 @@
 										
 										</ul>
 									</section>
+								</div>
+							</div>
+	
+									    </p>
+										<h4>Semáforo en Tinkercad</h4>
+										<blockquote>Este proyecto simula un semáforo usando LEDs. Los LEDs se encenderán en secuencia para simular las luces de un semáforo: rojo, amarillo y verde.</blockquote>
+										<h4>Pasos y Algoritmo</h4>
+										<pre><code>1. Conexión de los LEDs:
+											
+- Conecta la pata larga de cada LED a los pines digitales del Arduino: rojo al pin 13, amarillo al pin 12, y verde al pin 11.
+   - Conecta la pata corta de cada LED a GND a través de una resistencia de 220Ω.
+
+2. Código Arduino IDE:
+   ```cpp
+   const int redLED = 13;
+   const int yellowLED = 12;
+   const int greenLED = 11;
+
+   void setup() {
+       pinMode(redLED, OUTPUT);
+       pinMode(yellowLED, OUTPUT);
+       pinMode(greenLED, OUTPUT);
+   }
+
+   void loop() {
+       digitalWrite(redLED, HIGH);
+       delay(5000);
+       digitalWrite(redLED, LOW);
+
+       digitalWrite(yellowLED, HIGH);
+       delay(2000);
+       digitalWrite(yellowLED, LOW);
+
+       digitalWrite(greenLED, HIGH);
+       delay(5000);
+       digitalWrite(greenLED, LOW);
+   }
+   ```
+
+3. Sube el código al Arduino:
+   - Conecta el Arduino a tu computadora.
+   - Abre el Arduino IDE, pega el código anterior y súbelo al Arduino.</code></pre>
+									</section>
+
+									<section>
+										<h3 class="major">Lista</h3>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<h4>Materiales</h4>
+												<ul>
+													<li>Arduino Uno.</li>
+													<li>LEDs (rojo, amarillo y verde).</li>
+													<li>Resistencias (220Ω).</li>
+													<li>Protoboard.</li>
+													<li>Cables de conexión.</li>
+												</ul>
+												<div class="col-4"><span class="image fit"><img src="./Dinámica 1 v1.PNG" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="./Dinámica 1 v2.PNG" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="./Dinámica 1 v3.PNG" alt="" /></span></div>
+										
+										</ul>
+									</section>
+								</div>
+							</div>
+	
+									    </p>
+										<h4>Sensor de Ultrasonido con Servomotor</h4>
+										<blockquote>Este proyecto utiliza un sensor de ultrasonido para detectar objetos y mover un servomotor para abrir una puerta cuando la distancia medida es menor a un umbral determinado.</blockquote>
+										<h4>Pasos y Algoritmo</h4>
+										<pre><code>1. Conexión del Sensor de Ultrasonido:
+											
+- VCC del sensor al pin 5V del Arduino.
+   - GND del sensor a GND del Arduino.
+   - Trig del sensor al pin digital 9 del Arduino.
+   - Echo del sensor al pin digital 10 del Arduino.
+
+2. Conexión del Servomotor:
+   - VCC del servomotor al pin 5V del Arduino.
+   - GND del servomotor a GND del Arduino.
+   - Pin de control del servomotor al pin digital 6 del Arduino.
+
+3. Código Arduino IDE:
+   ```cpp
+   include <Servo.h>
+
+   const int trigPin = 9;
+   const int echoPin = 10;
+   const int servoPin = 6;
+   long duration;
+   int distance;
+   Servo myServo;
+
+   void setup() {
+       pinMode(trigPin, OUTPUT);
+       pinMode(echoPin, INPUT);
+       myServo.attach(servoPin);
+       myServo.write(0); // Cierra la puerta inicialmente
+       Serial.begin(9600);
+   }
+
+   void loop() {
+       digitalWrite(trigPin, LOW);
+       delayMicroseconds(2);
+       digitalWrite(trigPin, HIGH);
+       delayMicroseconds(10);
+       digitalWrite(trigPin, LOW);
+
+       duration = pulseIn(echoPin, HIGH);
+       distance = duration * 0.034 / 2;
+
+       Serial.print("Distance: ");
+       Serial.print(distance);
+       Serial.println(" cm");
+
+       if (distance < 10) {
+           myServo.write(90); // Abre la puerta
+       } else {
+           myServo.write(0); // Cierra la puerta
+       }
+
+       delay(1000);
+   }
+   ```
+
+4. Sube el código al Arduino:
+   - Conecta el Arduino a tu computadora.
+   - Abre el Arduino IDE, pega el código anterior y súbelo al Arduino.
+   - Observa cómo el servomotor se mueve para abrir y cerrar la puerta basada en la distancia medida por el sensor de ultrasonido.</code></pre>
+									</section>
+
+									<section>
+										<h3 class="major">Lista</h3>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<h4>Materiales</h4>
+												<ul>
+													<li>Arduino Uno.</li>
+													<li>Sensor de Ultrasonido HC-SR04.</li>
+													<li>Servomotor.</li>
+													<li>Protoboard.</li>
+													<li>Cables de conexión.</li>
+												</ul>
+												<div class="col-4"><span class="image fit"><img src="./Dinámica 4 v1.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="./Dinámica 4 v2.jpg" alt="" /></span></div>
+										
+										</ul>
+									</section>
 
 									<section>
 										<h3 class="major">Table</h3>
