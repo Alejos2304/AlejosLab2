@@ -60,12 +60,12 @@
 										<h4>Dinámica Resistencias</h4>
 										<blockquote>Una resistencia es un componente eléctrico que limita la cantidad de corriente que puede fluir a través de un circuito. Es crucial en muchos circuitos electrónicos para proteger componentes sensibles.</blockquote>
 										<h4>Pasos y Algoritmo</h4>
-										<pre><code>Conexión de la Resistencia y el LED:
+										<pre><code>1. Conexión de la Resistencia y el LED:
 											
 - Conecta la pata larga del LED (ánodo) al pin digital 13 del Arduino a través de una resistencia de 220Ω.
 - Conecta la pata corta del LED (cátodo) a GND (tierra) del Arduino.;
 
-Código Arduino IDE:
+2. Código Arduino IDE:
    ```cpp
    void setup() {
        pinMode(13, OUTPUT); // Configura el pin 13 como salida
@@ -107,30 +107,58 @@ Código Arduino IDE:
 	
 									    </p>
 										<h4>Sensor de Ultrasonido con Botón</h4>
-										<blockquote>Una resistencia es un componente eléctrico que limita la cantidad de corriente que puede fluir a través de un circuito. Es crucial en muchos circuitos electrónicos para proteger componentes sensibles.</blockquote>
+										<blockquote>Este proyecto utiliza un sensor de ultrasonido para medir la distancia y un botón para activar el sensor. El resultado se mostrará en el monitor serie del Arduino.</blockquote>
 										<h4>Pasos y Algoritmo</h4>
-										<pre><code>Conexión de la Resistencia y el LED:
+										<pre><code>1. Conexión del Sensor de Ultrasonido:
 											
-- Conecta la pata larga del LED (ánodo) al pin digital 13 del Arduino a través de una resistencia de 220Ω.
-- Conecta la pata corta del LED (cátodo) a GND (tierra) del Arduino.;
+- VCC del sensor al pin 5V del Arduino.
+   - GND del sensor a GND del Arduino.
+   - Trig del sensor al pin digital 9 del Arduino.
+   - Echo del sensor al pin digital 10 del Arduino.
 
-Código Arduino IDE:
+2. Conexión del Botón:
+   - Un pin del botón al pin digital 2 del Arduino.
+   - El otro pin del botón a GND.
+   - Coloca una resistencia de 10kΩ entre el pin del botón que está conectado al pin 2 del Arduino y el 5V.
+
+3. Código Arduino IDE:
    ```cpp
+   const int trigPin = 9;
+   const int echoPin = 10;
+   const int buttonPin = 2;
+   long duration;
+   int distance;
+
    void setup() {
-       pinMode(13, OUTPUT); // Configura el pin 13 como salida
+       pinMode(trigPin, OUTPUT);
+       pinMode(echoPin, INPUT);
+       pinMode(buttonPin, INPUT_PULLUP);
+       Serial.begin(9600);
    }
 
    void loop() {
-       digitalWrite(13, HIGH); // Enciende el LED
-       delay(1000); // Espera 1 segundo
-       digitalWrite(13, LOW); // Apaga el LED
-       delay(1000); // Espera 1 segundo
+       if (digitalRead(buttonPin) == LOW) {
+           digitalWrite(trigPin, LOW);
+           delayMicroseconds(2);
+           digitalWrite(trigPin, HIGH);
+           delayMicroseconds(10);
+           digitalWrite(trigPin, LOW);
+
+           duration = pulseIn(echoPin, HIGH);
+           distance = duration * 0.034 / 2;
+
+           Serial.print("Distance: ");
+           Serial.print(distance);
+           Serial.println(" cm");
+           delay(1000);
+       }
    }
    ```
 
-3. Sube el código al Arduino:
+4. Sube el código al Arduino:
    - Conecta el Arduino a tu computadora.
-   - Abre el Arduino IDE, pega el código anterior y súbelo al Arduino.</code></pre>
+   - Abre el Arduino IDE, pega el código anterior y súbelo al Arduino.
+   - Abre el monitor serie para ver la distancia medida cuando presionas el botón.</code></pre>
 									</section>
 
 									<section>
@@ -140,13 +168,15 @@ Código Arduino IDE:
 												<h4>Materiales</h4>
 												<ul>
 													<li>Arduino Uno.</li>
+													<li>Sensor de Ultrasonido HC-SR04.</li>
+													<li>Botón.</li>
 													<li>Protoboard.</li>
-													<li>Resistencia (220Ω).</li>
-													<li>LED.</li>
 													<li>Cables de conexión.</li>
+													<li>Resistencia (10kΩ para el botón).</li>
 												</ul>
-										<p><span class="image left"><img src="./Dinámica 1 v2" alt="" />
-										<p><span class="image right"><img src="./Dinámica 1 v3.PNG" alt="" />
+												<div class="col-4"><span class="image fit"><img src="./Dinámica 1 v1.PNG" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="./Dinámica 1 v2.PNG" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="./Dinámica 1 v3.PNG" alt="" /></span></div>
 										
 										</ul>
 									</section>
