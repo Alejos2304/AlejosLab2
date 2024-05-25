@@ -97,7 +97,51 @@ Código Arduino IDE:
 													<li>Cables de conexión.</li>
 												</ul>
 										<p><span class="image left"><img src="./Dinámica 1 v1.PNG" alt="" />
-										<p><span class="image in the middle"><img src="./Dinámica 1 v2.PNG" alt="" />
+										<p><span class="image center"><img src="./Dinámica 1 v2.PNG" alt="" />
+										<p><span class="image right"><img src="./Dinámica 1 v3.PNG" alt="" />
+										
+										</ul>
+										<h4>Sensor de Ultrasonido con Botón</h4>
+										<blockquote>Una resistencia es un componente eléctrico que limita la cantidad de corriente que puede fluir a través de un circuito. Es crucial en muchos circuitos electrónicos para proteger componentes sensibles.</blockquote>
+										<h4>Pasos y Algoritmo</h4>
+										<pre><code>Conexión de la Resistencia y el LED:
+											
+- Conecta la pata larga del LED (ánodo) al pin digital 13 del Arduino a través de una resistencia de 220Ω.
+- Conecta la pata corta del LED (cátodo) a GND (tierra) del Arduino.;
+
+Código Arduino IDE:
+   ```cpp
+   void setup() {
+       pinMode(13, OUTPUT); // Configura el pin 13 como salida
+   }
+
+   void loop() {
+       digitalWrite(13, HIGH); // Enciende el LED
+       delay(1000); // Espera 1 segundo
+       digitalWrite(13, LOW); // Apaga el LED
+       delay(1000); // Espera 1 segundo
+   }
+   ```
+
+3. Sube el código al Arduino:
+   - Conecta el Arduino a tu computadora.
+   - Abre el Arduino IDE, pega el código anterior y súbelo al Arduino.</code></pre>
+									</section>
+
+									<section>
+										<h3 class="major">Lista</h3>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<h4>Materiales</h4>
+												<ul>
+													<li>Arduino Uno.</li>
+													<li>Protoboard.</li>
+													<li>Resistencia (220Ω).</li>
+													<li>LED.</li>
+													<li>Cables de conexión.</li>
+												</ul>
+										<p><span class="image left"><img src="./Dinámica 1 v1.PNG" alt="" />
+										<p><span class="image center"><img src="./Dinámica 1 v2.PNG" alt="" />
 										<p><span class="image right"><img src="./Dinámica 1 v3.PNG" alt="" />
 										
 										</ul>
