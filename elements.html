@@ -19,7 +19,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="index.html">Solid State</a></h1>
+						<h1><a href="index.html">Dinámicas</a></h1>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -32,7 +32,7 @@
 							<ul class="links">
 								<li><a href="index.html">Home</a></li>
 								<li><a href="generic.html">Generic</a></li>
-								<li><a href="elements.html">Elements</a></li>
+								<li><a href="elements.html">Dinámicas</a></li>
 								<li><a href="#">Log In</a></li>
 								<li><a href="#">Sign Up</a></li>
 							</ul>
@@ -44,8 +44,8 @@
 					<section id="wrapper">
 						<header>
 							<div class="inner">
-								<h2>Elements</h2>
-								<p>Phasellus non pulvinar erat. Fusce tincidunt nisl eget ipsum.</p>
+								<h2>Dinámicas</h2>
+								<p>Dinámicas realizadas en clase con su descripción y foto.</p>
 							</div>
 						</header>
 
@@ -54,102 +54,47 @@
 								<div class="inner">
 
 									<section>
-										<h3 class="major">Text</h3>
-										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-										<h4>Blockquote</h4>
-										<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-										<h4>Preformatted</h4>
-										<pre><code>i = 0;
+										<h3 class="major">Orden de Dinámicas</h3>
+										<p>Primera dinámicas <b>Resistencias</b>, Segunda dinámica es </b>Ultrasonido con el botón</b>, despúes sigue la dinámica del </b>Semáforo Tinkercad</b> y finalmente seguiría la dinámica de </b>Ultrasonido con el servomotor</b>.
+										</p>
+										<h4>Dinámica Resistencias</h4>
+										<blockquote>Una resistencia es un componente eléctrico que limita la cantidad de corriente que puede fluir a través de un circuito. Es crucial en muchos circuitos electrónicos para proteger componentes sensibles.</blockquote>
+										<h4>Pasos y Algoritmo</h4>
+										<pre><code>Conexión de la Resistencia y el LED:
+											- Conecta la pata larga del LED (ánodo) al pin digital 13 del Arduino a través de una resistencia de 220Ω.
+											- Conecta la pata corta del LED (cátodo) a GND (tierra) del Arduino.;
 
-while (!deck.isInOrder()) {
-  print 'Iteration ' + i;
-  deck.shuffle();
-  i++;
-}
+Código Arduino IDE:
+   ```cpp
+   void setup() {
+       pinMode(13, OUTPUT); // Configura el pin 13 como salida
+   }
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+   void loop() {
+       digitalWrite(13, HIGH); // Enciende el LED
+       delay(1000); // Espera 1 segundo
+       digitalWrite(13, LOW); // Apaga el LED
+       delay(1000); // Espera 1 segundo
+   }
+   ```
+
+3. Sube el código al Arduino:
+   - Conecta el Arduino a tu computadora.
+   - Abre el Arduino IDE, pega el código anterior y súbelo al Arduino.</code></pre>
 									</section>
 
 									<section>
-										<h3 class="major">Lists</h3>
+										<h3 class="major">Lista</h3>
 										<div class="row">
 											<div class="col-6 col-12-medium">
-												<h4>Unordered</h4>
+												<h4>Materiales</h4>
 												<ul>
-													<li>Dolor pulvinar etiam.</li>
-													<li>Sagittis adipiscing.</li>
-													<li>Felis enim feugiat.</li>
+													<li>Arduino Uno.</li>
+													<li>Protoboard.</li>
+													<li>Resistencia (220Ω).</li>
+													<li>LED.</li>
+													<li>Cables de conexión.</li>
 												</ul>
-												<h4>Alternate</h4>
-												<ul class="alt">
-													<li>Dolor pulvinar etiam.</li>
-													<li>Sagittis adipiscing.</li>
-													<li>Felis enim feugiat.</li>
-												</ul>
-											</div>
-											<div class="col-6 col-12-medium">
-												<h4>Ordered</h4>
-												<ol>
-													<li>Dolor pulvinar etiam.</li>
-													<li>Etiam vel felis viverra.</li>
-													<li>Felis enim feugiat.</li>
-													<li>Dolor pulvinar etiam.</li>
-													<li>Etiam vel felis lorem.</li>
-													<li>Felis enim et feugiat.</li>
-												</ol>
-												<h4>Icons</h4>
-												<ul class="icons">
-													<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-													<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-													<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-													<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-												</ul>
-											</div>
-										</div>
-										<h4>Actions</h4>
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<ul class="actions">
-													<li><a href="#" class="button primary">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-												</ul>
-												<ul class="actions small">
-													<li><a href="#" class="button primary small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-												</ul>
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-												</ul>
-												<ul class="actions stacked small">
-													<li><a href="#" class="button primary small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-												</ul>
-											</div>
-											<div class="col-6 col-12-medium">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary fit">Default</a></li>
-													<li><a href="#" class="button fit">Default</a></li>
-												</ul>
-												<ul class="actions stacked small">
-													<li><a href="#" class="button primary small fit">Small</a></li>
-													<li><a href="#" class="button small fit">Small</a></li>
-												</ul>
-											</div>
-										</div>
-										<h4>Pagination</h4>
-										<ul class="pagination">
-											<li><span class="button small disabled">Prev</span></li>
-											<li><a href="#" class="page active">1</a></li>
-											<li><a href="#" class="page">2</a></li>
-											<li><a href="#" class="page">3</a></li>
-											<li><span>&hellip;</span></li>
-											<li><a href="#" class="page">8</a></li>
-											<li><a href="#" class="page">9</a></li>
-											<li><a href="#" class="page">10</a></li>
-											<li><a href="#" class="button small">Next</a></li>
 										</ul>
 									</section>
 
