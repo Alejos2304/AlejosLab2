@@ -337,30 +337,19 @@
 										<p>Primera dinámica <b>Maqueta</b>, Segunda dinámica es </b>Diseño</b>, despúes sigue la dinámica del </b>Componentes Encajados</b> y finalmente seguiría la dinámica de </b>Producto Completo</b>.
 										</p>
 										<h4>1.Dinámica MAQUETA</h4>
-										<blockquote>Para empezar a hacer realidad nuestro proyecto usamos cartulina,pegamento y cinta para hacer el boceto y prototipo de cubierta/casita de Hámter.</blockquote>
+										<blockquote>Para empezar a hacer realidad nuestro proyecto usamos cartulina Kraft de 300 gr.,pegamento y cinta para hacer el boceto y prototipo de cubierta/casita de Hámter.</blockquote>
 										<h4>Pasos y fabricación de elementos y piezas 3D</h4>
-										<pre><code>1. Conexión de la Resistencia y el LED:
+										<pre><code>1. Elaborar medidas:
 											
-- Conecta la pata larga del LED (ánodo) al pin digital 13 del Arduino a través de una resistencia de 220Ω.
-- Conecta la pata corta del LED (cátodo) a GND (tierra) del Arduino.;
+- Dibujar el diseño en 3D para las piezas antes de empezar a cortar
+- Con marcadores delinear el módelo ya pensado para empezar el proceso de corte.
 
-2. Código Arduino IDE:
-   ```cpp
-   void setup() {
-       pinMode(13, OUTPUT); // Configura el pin 13 como salida
-   }
+2. Corte de Piezas:
+   
+- Con una regla metálica y cúter se separan las piezas con cuidado.
 
-   void loop() {
-       digitalWrite(13, HIGH); // Enciende el LED
-       delay(1000); // Espera 1 segundo
-       digitalWrite(13, LOW); // Apaga el LED
-       delay(1000); // Espera 1 segundo
-   }
-   ```
-
-3. Sube el código al Arduino:
-   - Conecta el Arduino a tu computadora.
-   - Abre el Arduino IDE, pega el código anterior y súbelo al Arduino.</code></pre>
+3. Pegado de Piezas:
+   - Con ayuda de los compañeros pegamos los bordes con cinta Masking, teniendo listo la Maqueta.</code></pre>
 									</section>
 
 									<section>
@@ -369,15 +358,13 @@
 											<div class="col-6 col-12-medium">
 												<h4>Materiales</h4>
 												<ul>
-													<li>Arduino Uno.</li>
-													<li>Protoboard.</li>
-													<li>Resistencia (220Ω).</li>
-													<li>LED.</li>
-													<li>Cables de conexión.</li>
+													<li>Cartulina Kraft de 300 Gr.</li>
+													<li>Cúter.</li>
+													<li>Regla Metálica.</li>
+													<li>Cinta Masking.</li>
 												</ul>
-												<div class="col-4"><span class="image fit"><img src="./Prototipo Jaula.png" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="./Dinámica 1 v2.PNG" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="./Dinámica 1 v3.PNG" alt="" /></span></div>					
+												<div class="col-4"><span class="image fit"><img src="./Foto Grupal Boceto Prototipo.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="./Prototipo Jaula.png" alt="" /></span></div>					
 											    </ul>
 										</ul>
 									
@@ -388,43 +375,19 @@
 										<h4>2.Dinámica Diseño</h4>
 										<blockquote>Gracias a la implementación y el diseño 2D/3D, elaboramos una cubierta hecha de madera de 0.5 cm.; lo cuál le da un aspecto mas técnologico y es lo que que queremos transmitir al consumidor que adquiera la casita inteligente.Adiconal a ellos también fabricamos comedero del Hámster con Impresión 3D.</blockquote>
 										<h4>Pasos y Algoritmo</h4>
-										<pre><code>1. Conexión de los LEDs:
+										<pre><code>1. Diseño Corte Láser:
 											
-- Conecta la pata larga de cada LED a los pines digitales del Arduino: 
-  rojo al pin 13, amarillo al pin 12, y verde al pin 11.
+- Empezando diseñando la cubierta principal con <b>Adobe Illustrator</b> y el techo de la casita con <b>Autocad</b>.
+- Para el Diseño 3D de comedero (tapa como cubierta) utilizamos el programa <b>Ultimaker Cura</b> para su elaboración.
 
-- Conecta la pata corta de cada LED a GND a través de una resistencia de 220Ω.
+2. Perfección de Piezas:
 
-2. Código Arduino IDE:
-   ```cpp
-   const int redLED = 13;
-   const int yellowLED = 12;
-   const int greenLED = 11;
+- Una vez impresos sabemos que las piezas no quedan perfectas, por eso mediante una lija perfeccionamos las piezas y las pulimos; tanto la cubierta, techo y comedero.
 
-   void setup() {
-       pinMode(redLED, OUTPUT);
-       pinMode(yellowLED, OUTPUT);
-       pinMode(greenLED, OUTPUT);
-   }
+3. Acople de Piezas:
 
-   void loop() {
-       digitalWrite(redLED, HIGH);
-       delay(5000);
-       digitalWrite(redLED, LOW);
-
-       digitalWrite(yellowLED, HIGH);
-       delay(2000);
-       digitalWrite(yellowLED, LOW);
-
-       digitalWrite(greenLED, HIGH);
-       delay(5000);
-       digitalWrite(greenLED, LOW);
-   }
-   ```
-
-3. Sube el código al Arduino:
-   - Conecta el Arduino a tu computadora.
-   - Abre el Arduino IDE, pega el código anterior y súbelo al Arduino.</code></pre>
+- Para pegar el trupan tuvimos que adherir cola de madera y asegurar con clavos delgados en las esquinas.
+- En el caso del comedero solo acoplar el componente del servomotor para probar su funcionamiento.</code></pre>
 									</section>
 
 									<section>
@@ -433,15 +396,16 @@
 											<div class="col-6 col-12-medium">
 												<h4>Materiales</h4>
 												<ul>
-													<li>Arduino Uno.</li>
-													<li>LEDs (rojo, amarillo y verde).</li>
-													<li>Resistencias (220Ω).</li>
-													<li>Protoboard.</li>
-													<li>Cables de conexión.</li>
+													<li>Trupan de 0.5 cm.</li>
+													<li>Clavos Delgados.</li>
+													<li>Cola de Madera.</li>
+													<li>Lija</li>
 												</ul>
+												<div class="col-4"><span class="image fit"><img src="./Diseño Corte Láser.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="./Diseño Maqueta Plano.jfif" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="./Diseño 3D comedero II.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="./Diseño Original Placas.jpg" alt="" /></span></div>
 												<div class="col-4"><span class="image fit"><img src="./CASITA Cubierta.png" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="./Cubierta Render.jfif" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="./Cubierta Render Diseño 3D.jfif" alt="" /></span></div>
 												</ul>
 										</ul>
 									
@@ -452,43 +416,16 @@
 										<h4>3.Dinámica Componentes Encajados</h4>
 										<blockquote>Una vez impreso, procedemos a instalar el cirucito, que previemente calculamos donde irán cada pieza con sus respeticos agujeros y espaciados.</blockquote>
 										<h4>Pasos y Encaje de circuito</h4>
-										<pre><code>1. Conexión de los LEDs:
+										<pre><code>1. Medidas:
 											
-- Conecta la pata larga de cada LED a los pines digitales del Arduino: 
-  rojo al pin 13, amarillo al pin 12, y verde al pin 11.
+- Antes de asegurar el circuito probamos que todo funcione correctamente.
+- Una vez seguros de todo, como pegamento aseguramos todo y en caso de agujeros solo insertamos el comedero 3D.
 
-- Conecta la pata corta de cada LED a GND a través de una resistencia de 220Ω.
+2. Cortes para Insertar Componentes:
 
-2. Código Arduino IDE:
-   ```cpp
-   const int redLED = 13;
-   const int yellowLED = 12;
-   const int greenLED = 11;
-
-   void setup() {
-       pinMode(redLED, OUTPUT);
-       pinMode(yellowLED, OUTPUT);
-       pinMode(greenLED, OUTPUT);
-   }
-
-   void loop() {
-       digitalWrite(redLED, HIGH);
-       delay(5000);
-       digitalWrite(redLED, LOW);
-
-       digitalWrite(yellowLED, HIGH);
-       delay(2000);
-       digitalWrite(yellowLED, LOW);
-
-       digitalWrite(greenLED, HIGH);
-       delay(5000);
-       digitalWrite(greenLED, LOW);
-   }
-   ```
-
-3. Sube el código al Arduino:
-   - Conecta el Arduino a tu computadora.
-   - Abre el Arduino IDE, pega el código anterior y súbelo al Arduino.</code></pre>
+- En el caso de cortes anotamos las medidas con un lápiz para saber donde cortar con el taladro.
+- Una vez hecho los agujeros, lo lijamos para que los objetos se puedan insertar sin dificultades.
+- El caso de la casa normal del Hásmter usamos un alicate para cortar el acero teniendo en cuanta los espacios del techo de la cubierta para su funcionalidad.</code></pre>
 									</section>
 
 									<section>
@@ -497,14 +434,18 @@
 											<div class="col-6 col-12-medium">
 												<h4>Materiales</h4>
 												<ul>
-													<li>Arduino Uno.</li>
-													<li>LEDs (rojo, amarillo y verde).</li>
-													<li>Resistencias (220Ω).</li>
-													<li>Protoboard.</li>
-													<li>Cables de conexión.</li>
+													<li>Taladro.</li>
+													<li>Cúter.</li>
+													<li>Casa Hásmter.</li>
+													<li>Lija.</li>
+													<li>Alicate.</li>
 												</ul>
-												<div class="col-4"><span class="image fit"><img src="./Tinkercad Dinámica.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="./Tinkercad Dinámica 2.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="./Anclaje Circuito IV.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="./Taladro I.jfif" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="./Taladro II.jfif" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="./Anclaje Circuito.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="./Anclaje Circuito III.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="./Anclaje Circuito II.jpg" alt="" /></span></div>
 												</ul>
 										</ul>
 									
@@ -515,66 +456,9 @@
 										<h4>4.Producto Completo</h4>
 										<blockquote>Finalmente para concluir se le dio dos capas de pintura a la cubierta de la casita para darle un aspecto mas limpio y pulido.</blockquote>
 										<h4>Pasos y Algoritmo</h4>
-										<pre><code>1. Conexión del Sensor de Ultrasonido:
+										<pre><code>1. Diseño Exterior:
 											
-   - VCC del sensor al pin 5V del Arduino.
-   - GND del sensor a GND del Arduino.
-   - Trig del sensor al pin digital 9 del Arduino.
-   - Echo del sensor al pin digital 10 del Arduino.
-
-2. Conexión del Servomotor:
-   - VCC del servomotor al pin 5V del Arduino.
-   - GND del servomotor a GND del Arduino.
-   - Pin de control del servomotor al pin digital 6 del Arduino.
-
-3. Código Arduino IDE:
-   ```cpp
-   include <Servo.h>
-
-   const int trigPin = 9;
-   const int echoPin = 10;
-   const int servoPin = 6;
-   long duration;
-   int distance;
-   Servo myServo;
-
-   void setup() {
-       pinMode(trigPin, OUTPUT);
-       pinMode(echoPin, INPUT);
-       myServo.attach(servoPin);
-       myServo.write(0); // Cierra la puerta inicialmente
-       Serial.begin(9600);
-   }
-
-   void loop() {
-       digitalWrite(trigPin, LOW);
-       delayMicroseconds(2);
-       digitalWrite(trigPin, HIGH);
-       delayMicroseconds(10);
-       digitalWrite(trigPin, LOW);
-
-       duration = pulseIn(echoPin, HIGH);
-       distance = duration * 0.034 / 2;
-
-       Serial.print("Distance: ");
-       Serial.print(distance);
-       Serial.println(" cm");
-
-       if (distance < 10) {
-           myServo.write(90); // Abre la puerta
-       } else {
-           myServo.write(0); // Cierra la puerta
-       }
-
-       delay(1000);
-   }
-   ```
-
-4. Sube el código al Arduino:
-   - Conecta el Arduino a tu computadora.
-   - Abre el Arduino IDE, pega el código anterior y súbelo al Arduino.
-   - Observa cómo el servomotor se mueve para abrir y cerrar la puerta basada 
-     en la distancia medida por el sensor de ultrasonido.</code></pre>
+   - Una vez finalizado la instalación del circuito y ensamblaje de la cubierta, procedemos a perfeccionar el exterior con dos capas de pintura blanca; y para asegurar todo procedimos a prender la casita inteligente para su correcto funcionamiento.</code></pre>
 									</section>
 
 									<section>
@@ -583,14 +467,11 @@
 											<div class="col-6 col-12-medium">
 												<h4>Materiales</h4>
 												<ul>
-													<li>Arduino Uno.</li>
-													<li>Sensor de Ultrasonido HC-SR04.</li>
-													<li>Servomotor.</li>
-													<li>Protoboard.</li>
-													<li>Cables de conexión.</li>
+													<li>Pintura Blanca.</li>
+													<li>Lija.</li>
 												</ul>
-												<div class="col-4"><span class="image fit"><img src="./Dinámica 4 v1.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="./Dinámica 4 v2.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="./Producto Final.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="./Producto Final II.jpg" alt="" /></span></div>
 											</ul>   
 										</ul>
 									</section>
